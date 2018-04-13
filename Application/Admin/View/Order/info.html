@@ -1,0 +1,70 @@
+<include file="Index/header" title="后台主页" />
+<include file="Index/sidenav" title="后台主页" />
+<div id="page-wrapper" >
+		<h3 class="page-header">订单详情</h3>
+	<div class="padding10">
+		<div class="panel panel-primary">
+			<div class="panel-heading">订单编号:{$data[0]['order_id']}</div>
+			<div class="panel-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>商品详情</th>
+							<th class="text-center">单价</th>
+							<th class="text-center">购买数量</th>
+						</tr>
+					</thead>
+					<tbody>
+						<foreach name="data" item="v">	
+						<tr class="text-center">
+							<td class="text-left" style="vertical-align: middle !important;border-top:none !important">
+										<img src="{$v.img}" height="80" style="margin-right: 20px;">
+										<a href="{:U('productinfo/index',array('id'=>$v['id']))}">{$v.name}</a>
+									</td>
+									<td style="vertical-align: middle !important;border-top:none !important"> 
+										<h5>￥<span>{$v.price}</span></h5>
+									</td>
+									<td style="vertical-align: middle !important;border-top:none !important">
+										数量：{$v.product_num}
+									</td>
+									
+									
+								
+						</tr>
+						</foreach>
+					</tbody>
+					<tfoot>
+							<td class="text-left">
+								<h3>订单总价：<span style="color: #c9302c;font-size: 25px;">￥{$num}</span></h3>
+							</td>
+							<td colspan="2" class="text-right">
+										<if condition="$v.order_send eq 0">
+										<a class="singg-delete btn btn-danger btn-sm" >
+											等待发货</a>
+										
+										<elseif condition="$v.order_send eq 1 and $v.order_get eq 0"/>
+										<span class="btn btn-danger btn-sm"   >
+											用户未收货</span>
+										<else/>
+										</if>
+										<span  attr-id="{$v.cart_id}" class="btn btn-danger btn-sm" >
+											查看物流</span>
+									</td>
+					</tfoot>
+				</table>
+			</form>
+			</div>
+		</div>
+	</div>
+	<script>
+
+	    var SCOPE = {
+	        'add_url' : '/index.php/admin/Product/add',
+	        'jump_url' : '/index.php/admin/Classify/index',
+	        'edit_url' : '/index.php/admin/Classify/edit',
+	        'set_status_url' : '/index.php/admin/order/orderSend',
+	        'listorder_url' : '/index.php?c=menu&a=listorder',
+	        'update_url':'/index.php/admin/Classify/updatename',
+	    }
+	</script>
+	<include file="Index/footer" title="后台主页" />

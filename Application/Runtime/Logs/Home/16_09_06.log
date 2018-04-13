@@ -1,0 +1,188 @@
+[ 2016-09-06T10:36:46+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.907579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.164393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.164871s ]
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.1951s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = 0 ORDER BY listorder desc,class_id   [ RunTime:0.0024s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1  [ RunTime:0.0015s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=68 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0165s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=69 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0089s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=70 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=71 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=72 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=73 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=74 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=75 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=40 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0027s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=50 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0088s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=51 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=54 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0089s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=55 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=56 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=57 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=58 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0084s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=59 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=41 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0027s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=111 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=112 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=113 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=114 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0088s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=115 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=116 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0083s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=117 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=42 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0037s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=118 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0084s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=119 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=120 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0090s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=121 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=122 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=123 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=43 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0056s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=105 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0084s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=106 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0083s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=107 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=108 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=109 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=110 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0089s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=44 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0027s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=99 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=100 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0084s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=101 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=102 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=103 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=104 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=45 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0075s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=92 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=93 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=94 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=95 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=96 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=97 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=98 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=46 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0026s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=85 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0083s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=86 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0083s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=87 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0084s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=88 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=89 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0082s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=90 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0084s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=91 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=47 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0037s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=52 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0084s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=76 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0083s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=77 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0084s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=78 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0084s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=79 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0083s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=80 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0084s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=81 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0089s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=82 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=48 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0034s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=60 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=61 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=62 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=63 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=64 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0091s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=65 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0091s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=66 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0087s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=67 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0086s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=49 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0046s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=124 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0088s ]
+SQL: select  * from mall_product left join mall_class on mall_product.class_id=mall_class.class_id  where partent_id=125 and mall_product.status=1  order by partent_id,sell desc limit 0,5  [ RunTime:0.0085s ]
+SQL: SHOW COLUMNS FROM `mall_cart` [ RunTime:0.0346s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall_cart` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.069887s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.070306s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.714731s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.715060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.023331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.023559s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.063283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.063607s ]
+
+[ 2016-09-06T10:38:03+08:00 ] ::1 /index.php/Home/Productinfo/index/id/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = 0 ORDER BY listorder desc,class_id   [ RunTime:0.0007s ]
+NOTIC: [2048] Declaration of Common\Model\ProductModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\ProductModel.class.php 第 176 行.
+SQL: SHOW COLUMNS FROM `mall_product` [ RunTime:0.0185s ]
+SQL: SELECT * FROM `mall_product` WHERE ( id=24 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `mall_cart` [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall_cart` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000354s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000742s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079998s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001642s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002404s ]
+
+[ 2016-09-06T10:38:03+08:00 ] ::1 /index.php/Home/Productinfo/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001560s ]
+
+[ 2016-09-06T10:39:32+08:00 ] ::1 /index.php/Home/Products/index/class_id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+SQL: SHOW COLUMNS FROM `mall_cart` [ RunTime:0.0830s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall_cart` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.2202s ]
+SQL: SELECT `class_id`,`classname` FROM `mall_class` WHERE `status` = 1 AND `partent_id` = '40'  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = 0 ORDER BY listorder desc,class_id   [ RunTime:0.0011s ]
+NOTIC: [2048] Declaration of Common\Model\ProductModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\ProductModel.class.php 第 176 行.
+SQL: SHOW COLUMNS FROM `mall_product` [ RunTime:0.0357s ]
+SQL: SELECT * FROM `mall_product` WHERE `class_id` = 68 AND `status` = 1 ORDER BY sell desc LIMIT 0,5   [ RunTime:0.0026s ]
+SQL: SELECT * FROM `mall_product` WHERE `class_id` = 69 AND `status` = 1 ORDER BY sell desc LIMIT 0,5   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `mall_product` WHERE `class_id` = 70 AND `status` = 1 ORDER BY sell desc LIMIT 0,5   [ RunTime:0.0024s ]
+SQL: SELECT * FROM `mall_product` WHERE `class_id` = 71 AND `status` = 1 ORDER BY sell desc LIMIT 0,5   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `mall_product` WHERE `class_id` = 72 AND `status` = 1 ORDER BY sell desc LIMIT 0,5   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `mall_product` WHERE `class_id` = 73 AND `status` = 1 ORDER BY sell desc LIMIT 0,5   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `mall_product` WHERE `class_id` = 74 AND `status` = 1 ORDER BY sell desc LIMIT 0,5   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `mall_product` WHERE `class_id` = 75 AND `status` = 1 ORDER BY sell desc LIMIT 0,5   [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000382s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000769s ]
+NOTIC: [8] Undefined index: child D:\wamp\www\Application\Runtime\Cache\Home\239e986c9e0abb899f016cec7e1e9775.php 第 271 行.
+NOTIC: [8] Undefined index: child D:\wamp\www\Application\Runtime\Cache\Home\239e986c9e0abb899f016cec7e1e9775.php 第 271 行.
+NOTIC: [8] Undefined index: child D:\wamp\www\Application\Runtime\Cache\Home\239e986c9e0abb899f016cec7e1e9775.php 第 271 行.
+NOTIC: [8] Undefined index: child D:\wamp\www\Application\Runtime\Cache\Home\239e986c9e0abb899f016cec7e1e9775.php 第 271 行.
+NOTIC: [8] Undefined index: child D:\wamp\www\Application\Runtime\Cache\Home\239e986c9e0abb899f016cec7e1e9775.php 第 271 行.
+NOTIC: [8] Undefined index: child D:\wamp\www\Application\Runtime\Cache\Home\239e986c9e0abb899f016cec7e1e9775.php 第 271 行.
+NOTIC: [8] Undefined index: child D:\wamp\www\Application\Runtime\Cache\Home\239e986c9e0abb899f016cec7e1e9775.php 第 271 行.
+NOTIC: [8] Undefined index: child D:\wamp\www\Application\Runtime\Cache\Home\239e986c9e0abb899f016cec7e1e9775.php 第 271 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.158102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.158500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001835s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001982s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002346s ]
+
+[ 2016-09-06T10:39:33+08:00 ] ::1 /index.php/Home/Products/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001567s ]
+

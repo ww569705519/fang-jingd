@@ -1,0 +1,13 @@
+    <nav class="navsty"  >
+        <div class="container" style="padding-left: 120px;">
+                <ul>
+                    <foreach name="navs" item="v">
+                        <li>
+                            <a href="{:U('Products/index',array('class_id'=>$v['class_id']))}" class="nav-pub" style="">{$v.classname}</a>
+                        </li>
+                    </foreach>
+                </ul>
+
+        </div>
+    </nav>
+    <hr>    

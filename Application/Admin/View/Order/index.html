@@ -1,0 +1,83 @@
+<include file="Index/header" title="后台主页" />
+<include file="Index/sidenav" title="后台主页" />
+<div id="page-wrapper" >
+		<h3 class="page-header">订单管理</h3>
+	<div class="padding10">
+		<div class="panel panel-primary">
+			<div class="panel-heading">商品列表</div>
+			<div class="panel-body">
+			<form id="singcms-listorder">
+				<table class="table table-hover singcms-table">
+					<thead>
+						<tr>
+							<th>订单编号</th>
+					        <th>订单生成时间</th>
+					        <th>收货人姓名</th>
+					        <th>地址</th>
+					        <th>联系电话</th>
+					        <th>发货状态</th>
+					        <th>操作</th>
+						</tr>
+					</thead>
+ 
+					<tbody>
+						<volist name="list" id="v">
+							<tr>
+								<td>{$v.order_id}</td>
+								<td style="vertical-align: middle !important;">{$v.order_time|date="Y-m-d H:i",###}</td>
+								<td style="vertical-align: middle !important;">{$v.adress_name}</td>
+								<td style="vertical-align: middle !important;">{$v.address}</td>
+								<td style="vertical-align: middle !important;">
+									<span>{$v.phone}</span>
+								</td>
+								<td style="vertical-align: middle !important;">
+									<if condition="$v.order_send eq 0">
+										<a class="btn btn-danger" id="singcms-delete" attr-id="{$v.order_id}" attr-message="发货">
+											发货
+										</a>
+									<elseif condition="$v.order_send eq 1 and $v.order_get eq 0"/>
+										<a class="btn btn-info" >
+											已发货
+										</a>
+									<elseif condition="$v.order_send eq 1 and $v.order_get eq 1"/>
+										<a class="btn btn-danger">
+											已收货
+										</a>
+									</if>
+									<input type="hidden" name="class_id" value="{$v.class.id}">
+									<a href="javascript:void(0)" attr-id="{$v.id}" id="singcms-delete"  attr-a="admin" attr-message="删除">
+										
+									</a>
+								</td>
+								<td style="vertical-align: middle !important;">
+										<a class="btn btn-danger"　 href="{:U('order/info',array('id'=>$v['order_id']))}">
+											查看明细
+										</a>
+								</td>
+							</tr>
+						</volist>
+					</tbody>
+					<tfoot>
+						<tr >
+							<td colspan="7" style="text-align:right">
+							<div class="pagelist" style="text-align: right">{$page}</div>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</form>
+			</div>
+		</div>
+	</div>
+	<script>
+
+	    var SCOPE = {
+	        'add_url' : '/index.php/admin/Product/add',
+	        'jump_url' : '/index.php/admin/Classify/index',
+	        'edit_url' : '/index.php/admin/Classify/edit',
+	        'set_status_url' : '/index.php/admin/order/orderSend',
+	        'listorder_url' : '/index.php?c=menu&a=listorder',
+	        'update_url':'/index.php/admin/Classify/updatename',
+	    }
+	</script>
+	<include file="Index/footer" title="后台主页" />

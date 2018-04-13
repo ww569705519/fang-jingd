@@ -1,0 +1,569 @@
+[ 2016-08-15T16:36:25+08:00 ] 127.0.0.1 /index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000537s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016764s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000873s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001021s ]
+
+[ 2016-08-15T16:36:28+08:00 ] 127.0.0.1 /index.php/Admin/login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001309s ]
+SQL: SHOW COLUMNS FROM `mall_admin` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `mall_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `mall_admin` SET `lastlogintime`='1471250188' WHERE ( admin_id=1 ) [ RunTime:0.3834s ]
+
+[ 2016-08-15T16:36:29+08:00 ] 127.0.0.1 /index.php/Admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001202s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000995s ]
+
+[ 2016-08-15T16:36:31+08:00 ] 127.0.0.1 /index.php/admin/classify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001086s ]
+NOTIC: [2048] Declaration of Admin\Controller\ClassifyController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\ClassifyController.class.php 第 4 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\Application\Admin\Controller\ClassifyController.class.php 第 9 行.
+NOTIC: [8] Undefined index: pageSize D:\wamp\www\Application\Admin\Controller\ClassifyController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0037s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\Application\Admin\Controller\ClassifyController.class.php 第 11 行.
+SQL: SELECT * FROM `mall_class` WHERE `status` <> -1 AND `partent_id` = 0 ORDER BY listorder desc,class_id desc LIMIT 0,5   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\Application\Admin\Controller\ClassifyController.class.php 第 12 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mall_class` WHERE `status` <> -1 AND `partent_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\fe561dd2baf65a5a38210c0fde9166e9.php 第 158 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\fe561dd2baf65a5a38210c0fde9166e9.php 第 158 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\fe561dd2baf65a5a38210c0fde9166e9.php 第 158 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\fe561dd2baf65a5a38210c0fde9166e9.php 第 158 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\fe561dd2baf65a5a38210c0fde9166e9.php 第 158 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000903s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001078s ]
+
+[ 2016-08-15T16:36:31+08:00 ] 127.0.0.1 /index.php/admin/product
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001132s ]
+NOTIC: [2048] Declaration of Admin\Controller\ProductController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\ProductController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = 0 ORDER BY listorder desc,class_id   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `mall_product` [ RunTime:0.0037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall_product` WHERE ( status!=-1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_product` WHERE ( status!=-1 ) ORDER BY create_time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='64' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='65' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='67' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='80' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000339s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001050s ]
+
+[ 2016-08-15T16:36:37+08:00 ] 127.0.0.1 /index.php/Admin/Product/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001200s ]
+NOTIC: [2048] Declaration of Admin\Controller\ProductController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\ProductController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = '41' ORDER BY listorder desc,class_id   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000424s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined variable: products D:\wamp\www\Application\Runtime\Cache\Admin\8b641081e7ea680aaaea87475742484f.php 第 84 行.
+NOTIC: [8] Undefined variable: products D:\wamp\www\Application\Runtime\Cache\Admin\8b641081e7ea680aaaea87475742484f.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.111903s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.112115s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001217s ]
+
+[ 2016-08-15T16:36:38+08:00 ] 127.0.0.1 /index.php/Admin/Product/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001273s ]
+NOTIC: [2048] Declaration of Admin\Controller\ProductController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\ProductController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = 0 ORDER BY listorder desc,class_id   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `mall_product` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall_product` WHERE ( status!=-1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_product` WHERE ( status!=-1 ) ORDER BY create_time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='64' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='65' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='67' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='80' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000337s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000780s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037239s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000922s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001034s ]
+
+[ 2016-08-15T16:36:45+08:00 ] 127.0.0.1 /index.php/admin/order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000832s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+ERR: 无法加载控制器:Order
+
+[ 2016-08-15T16:36:48+08:00 ] 127.0.0.1 /index.php/Admin/Product/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+NOTIC: [2048] Declaration of Admin\Controller\ProductController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\ProductController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = 0 ORDER BY listorder desc,class_id   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `mall_product` [ RunTime:0.0269s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall_product` WHERE ( status!=-1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_product` WHERE ( status!=-1 ) ORDER BY create_time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.1948s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='64' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='65' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='67' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='80' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000334s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.1954s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.221535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.221709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000980s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001085s ]
+
+[ 2016-08-15T16:36:48+08:00 ] 127.0.0.1 /index.php/admin/adminUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminUserController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\AdminUserController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `mall_admin` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `mall_admin` WHERE `status` <> -1 ORDER BY admin_id desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080657s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001071s ]
+
+[ 2016-08-15T16:36:50+08:00 ] 127.0.0.1 /index.php/Admin/Product/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001899s ]
+NOTIC: [2048] Declaration of Admin\Controller\ProductController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\ProductController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = 0 ORDER BY listorder desc,class_id   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `mall_product` [ RunTime:0.0042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall_product` WHERE ( status!=-1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `mall_product` WHERE ( status!=-1 ) ORDER BY create_time desc LIMIT 0,5   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='64' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='65' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='67' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='80' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000305s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029171s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000921s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000919s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001078s ]
+
+[ 2016-08-15T16:36:52+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040495s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040684s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000696s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000857s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000889s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001055s ]
+
+[ 2016-08-15T20:25:06+08:00 ] 127.0.0.1 /index.php/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000921s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.5412s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.582489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.582931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002361s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002891s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002980s ]
+
+[ 2016-08-15T20:25:13+08:00 ] 127.0.0.1 /index.php/Admin/Product/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001208s ]
+NOTIC: [2048] Declaration of Admin\Controller\ProductController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\ProductController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.1028s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = '41' ORDER BY listorder desc,class_id   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.1430s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined variable: products D:\wamp\www\Application\Runtime\Cache\Admin\8b641081e7ea680aaaea87475742484f.php 第 84 行.
+NOTIC: [8] Undefined variable: products D:\wamp\www\Application\Runtime\Cache\Admin\8b641081e7ea680aaaea87475742484f.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.164028s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.164301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002968s ]
+
+[ 2016-08-15T20:25:14+08:00 ] 127.0.0.1 /index.php/Admin/Product/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+NOTIC: [2048] Declaration of Admin\Controller\ProductController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\ProductController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = 0 ORDER BY listorder desc,class_id   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `mall_product` [ RunTime:0.0036s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall_product` WHERE ( status!=-1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_product` WHERE ( status!=-1 ) ORDER BY create_time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='64' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='65' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='67' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='80' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000920s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001073s ]
+
+[ 2016-08-15T20:26:53+08:00 ] 127.0.0.1 /index.php/Admin/Image/ajaxuploadimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001124s ]
+NOTIC: [8] Use of undefined constant Y - assumed 'Y' D:\wamp\www\Application\Common\Model\UploadImageModel.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' D:\wamp\www\Application\Common\Model\UploadImageModel.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant d - assumed 'd' D:\wamp\www\Application\Common\Model\UploadImageModel.class.php 第 19 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-08-15T20:26:59+08:00 ] 127.0.0.1 /index.php/Admin/Image/kindupload?dir=image
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+NOTIC: [8] Use of undefined constant Y - assumed 'Y' D:\wamp\www\Application\Common\Model\UploadImageModel.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' D:\wamp\www\Application\Common\Model\UploadImageModel.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant d - assumed 'd' D:\wamp\www\Application\Common\Model\UploadImageModel.class.php 第 19 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-08-15T20:27:51+08:00 ] 127.0.0.1 /index.php/Admin/Product/save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000904s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001329s ]
+NOTIC: [2048] Declaration of Admin\Controller\ProductController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\ProductController.class.php 第 4 行.
+NOTIC: [8] Undefined index: id D:\wamp\www\Application\Admin\Controller\ProductController.class.php 第 87 行.
+NOTIC: [2048] Declaration of Common\Model\ProductModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\ProductModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `mall_product` [ RunTime:0.0041s ]
+SQL: INSERT INTO `mall_product` (`name`,`price`,`class_id`,`img`,`info`,`count`,`shelf`,`create_time`) VALUES ('华为 Mate 8 3GB+32GB版','4999','58','/upload/2016/08/15/57b1b50d97947.jpg','<img src=\"/upload/2016/08/15/57b1b513e44eb.jpg\" alt=\"\" />','65','1','1471264071') [ RunTime:0.0971s ]
+
+[ 2016-08-15T20:27:52+08:00 ] 127.0.0.1 /index.php/Admin/Product
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001097s ]
+NOTIC: [2048] Declaration of Admin\Controller\ProductController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) D:\wamp\www\Application\Admin\Controller\ProductController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `mall_class` WHERE `status` = 1 AND `partent_id` = 0 ORDER BY listorder desc,class_id   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `mall_product` [ RunTime:0.0042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall_product` WHERE ( status!=-1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `mall_product` WHERE ( status!=-1 ) ORDER BY create_time desc LIMIT 0,5   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `mall_class` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='58' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='64' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='65' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='67' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `mall_class` WHERE ( 1=1 AND class_id='61' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\wamp\www\Application\Common\Model\MenuModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `mall_menu` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `mall_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: a D:\wamp\www\Application\Common\Common\function.php 第 37 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027268s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001171s ]
+

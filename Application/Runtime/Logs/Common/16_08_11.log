@@ -1,0 +1,12 @@
+[ 2016-08-11T19:02:12+08:00 ] ::1 /index.php/Image/ajaxuploadimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+ERR: 无法加载模块:Image
+
+[ 2016-08-11T19:02:42+08:00 ] ::1 /index.php/Image/ajaxuploadimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+ERR: 无法加载模块:Image
+

@@ -1,0 +1,70 @@
+<include file="Index/header" title="后台主页" />
+<include file="Index/sidenav" title="后台主页" />
+<div id="page-wrapper" >
+
+	<div class="col-lg-12">
+		<h3 class="page-header">用户管理</h3>
+	</div>
+	<div class="row">
+		<div class="col-md-10">
+			<a class="btn btn-default" type="submit" href="{:U('AdminUser/add')}">添加</a>
+		</div>
+		<div class="col-md-2">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="请输入关键字">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="padding10">
+		<div class="panel panel-primary">
+			<div class="panel-heading">菜单列表</div>
+			<div class="panel-body">
+				<table class="table table-hover singcms-table">
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>用户名</th>
+							<th>真实名字</th>
+							<th>最后登录时间</th>
+							<th>状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<volist name="admins" id="v">
+							<tr>
+								<td>{$v.admin_id}</td>
+								<td>{$v.username}</td>
+								<td>{$v.realname}</td>
+								<td>{$v.lastlogintime|date="Y-m-d H:i",###}</td>
+								<td><span  attr-status="<if condition="$v['status'] eq 1">0<else/>1</if>"  attr-id="{$v.admin_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$v.status|status}</span></td>
+								<td>
+								<a href="javascript:void(0)" >
+									<span class="glyphicon glyphicon-remove-circle" aria-hidden="true" attr-id="{$v.admin_id}" id="singcms-delete"  attr-a="admin" attr-message="删除"></span>
+								</a>
+							</td>
+						</tr>
+					</volist>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<script>
+
+	    var SCOPE = {
+	        'add_url' : '/index.php?c=menu&a=add',
+	        'edit_url' : '/index.php/admin/menu/edit',
+	        'set_status_url' : '/index.php/admin/AdminUser/setstatus',
+	        'listorder_url' : '/index.php?c=menu&a=listorder',
+
+	    }
+	</script>
+<include file="Index/footer" title="后台主页" />

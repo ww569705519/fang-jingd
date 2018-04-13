@@ -1,0 +1,135 @@
+<include file="Public/header" title="热销产品"/>
+<!-- header -->
+<include file="Public/nav" />
+<div class="container" >
+	<div class="col-xs-5 text-center" style="padding: 10px ">
+		<div class="col-xs-12" style="padding: 0px">
+			<div style="border:1px solid #e7e7e7;padding: 20px;">
+				<img src="{$productdata.img}" width="370" ></div>
+		</div>
+		<div class="col-xs-12" style="margin-top: 10px;padding: 0px">
+			<div class="col-xs-3" style="border:1px solid #e7e7e7;padding: 20px;">
+				<img src="__PUBLIC__/img/a.jpg" width="55"></div>
+			<div class="col-xs-3" style="border:1px solid #e7e7e7;padding: 20px;">
+				<img src="__PUBLIC__/img/a.jpg" width="55"></div>
+			<div class="col-xs-3" style="border:1px solid #e7e7e7;padding: 20px;">
+				<img src="__PUBLIC__/img/a.jpg" width="55"></div>
+			<div class="col-xs-3" style="border:1px solid #e7e7e7;padding: 20px;">
+				<img src="__PUBLIC__/img/a.jpg" width="55"></div>
+		</div>
+	</div>
+	<div class="col-xs-7" style="padding: 10px 40px;font-weight: 700 !important;color: #666 !important;">
+		<h3 style="padding:30px 0px;padding-top: 0px">{$productdata.name}</h3>
+		<h3 style="padding:30px 0px;">
+			库存
+			<span style="color:green;font-size: 20px;margin-left: 30px" id="count">{$productdata.count}</span>
+		</h3>
+		<div class="col-xs-12">
+			<div class="form-inline " style="padding:30px 0px;">
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon" style="cursor: pointer" onclick="add()">
+							<span class="glyphicon glyphicon-plus"  ></span>
+						</div>
+						<input type="number" id="num" class="form-control" style="width: 50px !important;" value="1">
+						<div class="input-group-addon" style="cursor: pointer" onclick="cut()">
+							<span class="glyphicon glyphicon-minus"  ></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12" style="padding:30px 0px;">
+			<div class="col-xs-5">
+				<a class="btn btn-danger" style="padding:10px 30px;font-weight: 700 !important;font-size:18px"  onclick="post({$productdata.id})" id="buy">立即购买</a>
+			</div>
+			<div class="col-xs-5">
+				<a class="btn btn-danger" style="padding:10px 30px;font-weight: 700 !important;font-size: 18px" onclick="addCart({$productdata.id})" id="addCart">加入购物车</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12" style="margin-top: 30px;">
+		<ul class="nav nav-tabs">
+			<li role="presentation" class="active" >
+				<a href="#">商品详情</a>
+			</li>
+			<li role="presentation" >
+				<a href="#">累计评论</a>
+			</li>
+		</ul>
+		<div class="col-xs-12 text-center" style="padding:30px" id="info">
+			{$productdata.info}
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var count=parseInt($("#count").text());
+		if(count<=0){
+			$('#buy').attr("disabled",true).removeAttr("onclick"); 
+			$('#addCart').attr("disabled",true).removeAttr("onclick"); 
+		}
+	});
+	function post(a){
+		// $.post()
+		var isurl='/index.php/home/common/isLogin2';
+		  $.getJSON(isurl,function(result){
+		  if(result.status==0){
+		    	return pop.success('请先登录', '/index.php/home/login');	
+		    }else if(result.status==1){
+		    	var count=parseInt($("#count").text());
+			    	if($("#num").val()>count){
+			    		return pop.error('库存不足');
+			    	}else{
+			    		var num=parseInt($("#num").val());
+						var url='/index.php/home/order/proOrder/id/'+a+'/num/'+num;
+						window.location.href=url;
+			    	}
+		    }
+		  });
+	}
+	function addCart(product_id){
+		// $.post()
+		var url='/index.php/home/cart/add';
+		var num=$("#num").val();
+		  $.post(url,{product_id:product_id,product_num:num},function(result){
+		  if(result.status==0){
+		    	return pop.error(result.message);	
+		    }else if(result.status==1){
+		    	var cartList=result.data;
+		    	$('#cartList').html(cartList);
+		    	return pop.successshow(result.message);
+		    }
+		  },"JSON");
+	}
+	
+	function add(){
+		var count=parseInt($("#count").text());
+		var num=$("#num").val();
+		if(num<count){
+			num++;
+			$("#num").val(num);
+		}
+		
+	}
+	function cut(){
+		var num=$("#num").val();
+		if (num>1) {
+			num--;
+			$("#num").val(num);
+		}
+	}
+	$("#num").blur(function(){
+		var count=parseInt($("#count").text());
+		var num=$(this).val();
+		if(num<=0){
+			$(this).val(1);
+			return pop.error('购买数量不能少于1');
+		}else if(num>0 && num<count){
+			$(this).val(num);
+		}else{
+			$(this).val(count);
+		}
+	});
+</script>
+<include file="public/footer" />

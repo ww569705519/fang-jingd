@@ -1,0 +1,3 @@
+web客户端接口文档：
+1.注册接口地址：/index.php/Api/Register/register
+2.登录接口地址: /index.php/Api/Login/login

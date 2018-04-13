@@ -1,0 +1,95 @@
+body {
+  margin-top: 50px;
+}
+#page-wrapper {
+  width: 100%;
+  padding: 5px 15px;
+}
+
+@media (min-width:768px) {
+
+  /* Wrappers */
+
+  #wrapper {
+	padding-left: 225px;
+  }
+
+  #page-wrapper {
+	padding: 15px 25px;
+  }
+  
+  /* Side Nav */
+
+  .side-nav {
+	margin-left: -225px;
+	left: 225px;
+	width: 225px;
+	position: fixed;
+	top: 50px;
+	height: 100%;
+	border-radius: 0;
+	border: none;
+	overflow-y: auto;
+  border-right:1px #E7E7E7 solid;
+  }
+
+  /* Bootstrap Default Overrides - Customized Dropdowns for the Side Nav */
+
+  .side-nav>li.dropdown>ul.dropdown-menu {
+	position: relative;
+	min-width: 225px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+  }
+
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a {
+	color: #999999;
+	padding: 15px 15px 15px 25px;
+  }
+
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a:hover,
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a.active,
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a:focus {
+	color: #fff;
+	background-color: #080808;
+  }
+
+  .side-nav>li>a {
+	width: 225px;
+  }
+
+  .navbar-inverse .navbar-nav>li>a:hover,
+  .navbar-inverse .navbar-nav>li>a:focus {
+   
+	background-color: #080808;
+  }
+
+  /* Nav Messages */
+
+  .messages-dropdown .dropdown-menu {
+	min-width: 300px;
+  }
+
+  .messages-dropdown .dropdown-menu li a {
+	white-space: normal;
+  }
+
+}
+body,table,ul,a,div,p{font-family: "微软雅黑";}
+table th {text-align: center;}
+table tr td {text-align: center;}
+ul li{list-style: none;}
+ul li {padding-left: 0px;}
+ul {padding: 0px;margin:0px;}
+
+.padding10{
+  padding:20px 0px;
+}
+.pagelist{ text-align:center;}
+.pagelist a{margin:0px -1px;margin-left: 5px;  border:#ccc solid 1px; display:inline-block; text-align: center;padding:5px 5px ; line-height:16px; color:#333;min-width: 30px;min-height: 30px;border-radius: 4px; text-decoration: none;}
+.pagelist span{ margin-left: 5px; border:#ccc solid 1px; display:inline-block; text-align: center;padding:5px 5px ; line-height:16px; color:#333;min-width: 30px;min-height: 30px;border-radius: 4px;}

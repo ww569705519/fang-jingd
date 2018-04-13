@@ -1,0 +1,117 @@
+<include file="Public/header" title="热销产品"/>
+<!-- header -->
+<include file="Public/nav" />
+	<div class="container">
+	<if condition="$order">
+	<div class="col-xs-12">
+	
+		<foreach name="order" item="v">
+		<form class="orderform">
+		<div class="panel panel-danger">
+			<div class="panel-heading" style="color: white;background-color: #D9534F !important">{$v.order_time|date="Y-m-d H:i",###}<span style="margin-left: 30px;">订单号13143435123{$v.order_id}</span></div>
+			<div class="panel-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>商品详情</th>
+							<th class="text-center">单价</th>
+							<th class="text-center">购买数量</th>
+							<th class="text-center">订单总价</th>
+							<th class="text-center">订单状态</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="text-center">
+							<td class="text-left" style="vertical-align: middle !important;border-top:none !important">
+										<img src="{$v.img}" height="80" style="margin-right: 20px;">
+										<a href="{:U('productinfo/index',array('id'=>$v['id']))}">{$v.name}</a>
+									</td>
+									<td style="vertical-align: middle !important;border-top:none !important"> 
+										<h5>￥<span>{$v.price}</span></h5>
+									</td>
+									<td style="vertical-align: middle !important;border-top:none !important">
+										数量：{$v.product_num}
+									</td>
+									
+									<td style="vertical-align: middle !important;border-top:none !important" class="text-center">
+										<h5 >￥<span id="price-{$v.cart_id}">{$v['product_num']*$v['price']}</span>
+										<p>(含运费￥0.00)</p></h5>
+									</td>
+									<td style="vertical-align: middle !important;border-top:none !important">
+										<if condition="$v.order_send eq 0">
+										<a class="singg-delete btn btn-danger" >
+											等待发货</a>
+										
+										<elseif condition="$v.order_send eq 1 and $v.order_get eq 0"/>
+										<span   class="btn btn-danger" onclick="orderGet({$v.order_id})">
+											确认收货</span>
+											<input type="hidden"  value="{$v.order_id}">
+										
+										<else/>
+										</if>
+										<span  attr-id="{$v.cart_id}" class="singg-delete btn btn-danger" >
+											查看物流</span>
+										<if condition="$v.order_send eq 1 and $v.order_get eq 1">	
+										<p style="margin-bottom: -40px;padding: 20px;"><a onclick="orderDel({$v.order_id})" class="btn btn-danger">删除订单</a></p>
+										<else/>
+										</if>
+									</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<input type="hidden" name="order_id{$v.oreder_id}" />
+		</form>
+		</foreach>
+	</div>
+	<else/>
+		<div class="jumbotron" style="background: none !important">
+			<h1>暂无任何订单消息，请赶紧去购物吧</h1>
+			<p style="margin-top: 20px;">
+				<a class="btn btn-lg btn-danger" href="{:U('index/index')}" role="button">商城主页</a>
+			</p>
+		</div>
+	</if>
+</div>
+<script type="text/javascript">
+	function orderGet(order_id){
+		var url='/index.php/home/order/orderGet';
+		var data={order_id:order_id};
+		$.post(url,data,function(res){
+			if (res.status==1) {
+				return pop.success(res.message,res.data);
+			}else{
+				return pop.error(res.message);
+			}
+		},"JSON");
+	}
+	function orderDel(order_id){
+		var url='/index.php/home/order/orderDel';
+		var data={order_id:order_id};
+		// $.post(url,data,function(res){
+		// 	if (res.status==1) {
+		// 		return pop.success(res.message,res.data);
+		// 	}else{
+		// 		return pop.error(res.message);
+		// 	}
+		// },"JSON");
+	    layer.confirm('是否确定删除订单？', {
+			  btn: ['确定','取消'] 
+			}, function(){
+				 $.post(
+			        url,
+			        data,
+			        function(res){
+			            if(res.status == 1) {
+			                  return pop.success(res.message,res.data);
+			            }else {
+			                return pop.error(res.message);
+			            }
+			        }
+			    ,"JSON");
+			}, function(){
+			  });
+	}
+</script>
+<include file="public/footer" />

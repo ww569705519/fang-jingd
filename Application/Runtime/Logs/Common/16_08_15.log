@@ -1,0 +1,48 @@
+[ 2016-08-15T16:37:17+08:00 ] 127.0.0.1 /index.php/%7B%7Bv.img%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+ERR: 无法加载模块:{{v
+
+[ 2016-08-15T16:44:56+08:00 ] 127.0.0.1 /index.php/%7B%7Bv.img%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000734s ]
+ERR: 无法加载模块:{{v
+
+[ 2016-08-15T16:44:57+08:00 ] 127.0.0.1 /index.php/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+ERR: 无法加载模块:Index.js
+
+[ 2016-08-15T20:24:03+08:00 ] 127.0.0.1 /index.php/%7B%7Bv.img%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+ERR: 无法加载模块:{{v
+
+[ 2016-08-15T20:24:18+08:00 ] 127.0.0.1 /index.php/%7B%7Bv.img%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000931s ]
+ERR: 无法加载模块:{{v
+
+[ 2016-08-15T20:28:56+08:00 ] 127.0.0.1 /index.php/%7B%7Bv.img%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001225s ]
+ERR: 无法加载模块:{{v
+
+[ 2016-08-15T20:46:27+08:00 ] 127.0.0.1 /index.php/%7B%7Bv.img%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+ERR: 无法加载模块:{{v
+
+[ 2016-08-15T20:46:28+08:00 ] 127.0.0.1 /index.php/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000897s ]
+ERR: 无法加载模块:Index.js
+

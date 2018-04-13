@@ -1,0 +1,124 @@
+<include file="Index/header" title="后台主页" />
+<include file="Index/sidenav" title="后台主页" />
+<div id="page-wrapper" >
+		<h3 class="page-header">商品管理</h3>
+	<div class="row">
+		<div class="col-md-10">
+			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">添加商品</button>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<form id="singcms-form" action="{:U('Product/add')}"  method="post">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">添加顶级分类</h4>
+							</div>
+							<div class="modal-body">
+
+								<div class="row"></div>
+								<div class="row">
+									<div class="col-md-4"></div>
+
+									<div class="col-md-4">
+										<div class="form-group">
+											<select class="form-control" name="class_id">
+												<option value="">==请选择分类==</option>
+												<foreach name="class" item="v">
+													<option value="{$v.class_id}">{$v.classname}</option>
+												</foreach>
+											</select>
+											<div class="col-md-4"></div>
+										</div>
+									</div>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+									<input type="submit" value='确定' class="btn btn-primary"  />
+								</div>
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="请输入关键字">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="padding10">
+		<div class="panel panel-primary">
+			<div class="panel-heading">商品列表</div>
+			<div class="panel-body">
+				<table class="table table-hover singcms-table">
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>商品名称</th>
+							<th>商品类型</th>
+							<th>价格</th>
+							<th>库存</th>
+							<th>状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<volist name="list" id="v">
+							<tr>
+								<td>{$v.id}</td>
+								<td style="vertical-align: middle !important; text-align: left">
+									<img src="{$v.img}" width="50" height="50">{$v.name}</td>
+								<td style="vertical-align: middle !important;">{$v.classname}</td>
+								<td style="vertical-align: middle !important;">￥{$v.price}</td>
+								<td style="vertical-align: middle !important;">{$v.count}</td>
+								<td style="vertical-align: middle !important;">
+									<span>{$v.shelf|shelf}</span>
+								</td>
+								<td style="vertical-align: middle !important;">
+									<a href="{:U('Product/edit',array('id'=>
+										$v['id'],'class_id'=>$v['class_id']))}" >
+										<span class="glyphicon glyphicon-record" ></span>
+									</a>
+									<input type="hidden" name="class_id" value="{$v.class.id}">
+									<a href="javascript:void(0)" attr-id="{$v.id}" id="singcms-delete"  attr-a="admin" attr-message="删除">
+										<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+									</a>
+								</td>
+							</tr>
+						</volist>
+					</tbody>
+					<tfoot>
+						<tr >
+							<td colspan="7" style="text-align:right">
+							<div class="pagelist" style="text-align: right">{$page}</div>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script>
+
+	    var SCOPE = {
+	        'add_url' : '/index.php/admin/Product/add',
+	        'jump_url' : '/index.php/admin/Classify/index',
+	        'edit_url' : '/index.php/admin/Classify/edit',
+	        'set_status_url' : '/index.php/admin/Product/setstatus',
+	        'listorder_url' : '/index.php?c=menu&a=listorder',
+	        'update_url':'/index.php/admin/Classify/updatename',
+	    }
+	</script>
+	<include file="Index/footer" title="后台主页" />

@@ -1,0 +1,60 @@
+  <include file="Public/header" title="登录注册"/>  
+  <!-- header -->  
+  <include file="Public/nav" />  
+  <div class="container">
+    <div class="col-xs-6">
+      <h3>新增收货地址</h3>
+      <hr>  
+      <form class="form-horizontal" id="singcms-form">
+        <div class="form-group">
+          <label for="exampleInputEmail1">收货人姓名</label>
+          <input type="text" class="form-control" placeholder="姓名" name="adress_name"></div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">收货人电话</label>
+          <input type="text" class="form-control" placeholder="手机号码" name="phone"></div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">收货人地址</label>
+          <input type="text" class="form-control" placeholder="地址" name="address"></div>
+        <button type="button" class="btn btn-danger" id="singcms-button-submit">新增</button>
+      </form>
+    </div>
+
+    <div class="col-xs-6">
+      <h3>收货地址</h3>
+      <hr>  
+
+      <if condition="$address">
+        <foreach name="address" item="x">
+          <div class="col-xs-6" >
+          <div class="col-xs-12 active" <if condition="$x.active eq 1">style="border:2px solid #d9534f;padding: 10px;border-radius: 5px;padding-bottom: 0px;margin-top: 10px;"<else/>style="border:2px solid #e7e7e7;padding: 10px;border-radius: 5px;padding-bottom: 0px;margin-top: 10px;"</if> >
+              <p style="border-bottom: 1px #e7e7e7 solid">{$x.adress_name}</p>
+              <div style="border-bottom: 1px #e7e7e7 solid;width: 100%;height: 70px;">{$x.address}</br>({$x.phone})</div>
+              <p style="padding-top: 10px;">
+                <a href="" style="float: left" class="sing-active" attr-id="{$x.address_id}">
+                  设置为默认地址
+                </a>
+                <a href="" style="color:#d9534f;float: right" class="sing-delete" attr-id="{$x.address_id}">
+                  <span class="glyphicon glyphicon-remove"></span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </foreach>
+        <else/>  
+        <h3 style="color:#d9534f">
+          <span class="glyphicon glyphicon-arrow-left"></span>
+          请添加收货地址
+        </h3>
+      </if>
+    </div>
+
+  </div>
+  <script type="text/javascript">
+    var SCOPE = {
+        'save_url' : '/index.php/home/userinfo/add',
+        'jump_url' : '/index.php/home/userinfo',
+        'set_status_url' : '/index.php/home/userinfo/setstatus',
+        'set_active_url':'/index.php/home/userinfo/setActive',
+    }
+  </script>
+  <include file="Public/footer" title="登录注册"/>  
